@@ -1,0 +1,20 @@
+# Compiled
+*.elc
+
+# Packaging
+.cask
+
+# Backup files
+*~
+
+# Undo-tree save-files
+*.~undo-tree
+/transient/
+/recentf
+/projectile-bookmarks.eld
+/elpa/
+/eln-cache/
+/.cache/
+/history/
+/projectile.cache/
+/history
