@@ -1,6 +1,6 @@
 (setq comp-speed 3)
-(load "~/.emacs.d/packages/bindings.el")
 (load "~/.emacs.d/packages/initialize.el")
+(load "~/.emacs.d/packages/bindings.el")
 (load "~/.emacs.d/config.el")
 (load "~/.emacs.d/packages/UI/init.el")
 (load "~/.emacs.d/packages/pulsar/init.el") 
@@ -21,7 +21,7 @@
 
 
 ;; (load "~/.emacs.d/packages/multiple-cursors/init.el")
-;; (load "~/.emacs.d/packages/ide/init.el") 
+(load "~/.emacs.d/packages/ide/init.el") 
 
 ;; add emmet mode
 (add-to-list 'load-path "~/.emacs.d/emmet-mode")
