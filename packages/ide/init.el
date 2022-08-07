@@ -96,3 +96,18 @@
 
 
 ;;;;;;;;;;;;;;;;;; typescript setup end
+
+
+
+
+;;;;;;;;;;;;;;;; clojure mode
+(use-package clojure-mode)
+(use-package clojure-mode-extra-font-locking)
+(use-package aggressive-indent)
+(use-package smartparens)
+(use-package cider)
+
+(add-hook 'clojure-mode-hook #'subword-mode)
+(add-hook 'clojure-mode-hook #'smartparens-strict-mode)
+(add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
