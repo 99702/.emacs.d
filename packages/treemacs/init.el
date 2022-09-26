@@ -23,13 +23,12 @@
           treemacs-indentation-string              " "
           treemacs-is-never-other-window           nil
           treemacs-max-git-entries                 5000
-          treemacs-missing-project-action          'ask
+          treemacs-missing-project-action          'ask ;
           treemacs-move-forward-on-expand          nil
           treemacs-no-png-images                   nil
           treemacs-no-delete-other-windows         t
           treemacs-project-follow-cleanup          nil
           treemacs-persist-file                    (expand-file-name ".cache/treemacs-persist" user-emacs-directory)
-          treemacs-position                        'left
           treemacs-read-string-input               'from-child-frame
           treemacs-recenter-distance               0.1
           treemacs-recenter-after-file-follow      nil
@@ -37,7 +36,7 @@
           treemacs-recenter-after-project-jump     'always
           treemacs-recenter-after-project-expand   'on-distance
           treemacs-litter-directories              '("/node_modules" "/.venv" "/.cask")
-          treemacs-show-cursor                     nil
+          treemacs-show-cursor                    nil 
           treemacs-show-hidden-files               t
           treemacs-silent-filewatch                nil
           treemacs-silent-refresh                  t
@@ -59,9 +58,8 @@
     ;; using a Hi-DPI display, uncomment this to double the icon size.
     ;;(treemacs-resize-icons 44)
 
-    (treemacs-follow-mode t)
+    ;; (treemacs-follow-mode t)
     (treemacs-filewatch-mode t)
-    (treemacs-fringe-indicator-mode 'always)
 
     (pcase (cons (not (null (executable-find "git")))
                  (not (null treemacs-python-executable)))
@@ -71,15 +69,17 @@
        (treemacs-git-mode 'simple)))
 
     (treemacs-hide-gitignored-files-mode nil))
-  ;; :bind		;
-  ;; (:map global-map
-  ;;       ("M-0"       . treemacs-select-window)
+  :bind		;
+  (:map global-map
+        ("M-1"       . treemacs-select-window)
   ;;       ("C-x t 1"   . treemacs-delete-other-windows)
   ;;       ("C-x t t"   . treemacs)
   ;;       ("C-x t d"   . treemacs-select-directory)
   ;;       ("C-x t B"   . treemacs-bookmark)
   ;;       ("C-x t C-t" . treemacs-find-file)
-  ;;       ("C-x t M-t" . treemacs-find-tag)))
+	;;       ("C-x t M-t" . treemacs-find-tag)
+	)
+  )
 
 (use-package treemacs-projectile
   :after (treemacs projectile)
@@ -102,4 +102,26 @@
   :ensure t
   :config (treemacs-set-scope-type 'Perspectives))
 
-(treemacs-display-current-project-exclusively)
+;;(treemacs-display-current-project-exclusively)
+
+
+
+;;show cursor in treemacs
+;; (defun my-remap-hl-line ()
+  ;; "Remap hl-line face."
+  ;; (face-remap-add-relative 'hl-line `(:background ,(face-background 'modus-themes-lang-error) :foreground ,(face-foreground 'modus-themes-link-broken))))
+;; (defface custom-line-highlight '((t (:background "cyan" :extend t))) "")
+
+
+(add-hook
+'treemacs-mode-hook
+(defun change-hl-line-mode ()
+(setq-local hl-line-face 'modus-themes-link-broken)
+(overlay-put hl-line-overlay 'face hl-line-face)
+(treemacs--setup-icon-background-colors)))
+;; this is the man
+
+
+
+;; (with-eval-after-load 'treemacs 
+  ;; (add-hook 'treemacs-mode-hook #'my-remap-hl-line))

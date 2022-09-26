@@ -43,7 +43,7 @@
 (setq pulsar-pulse t)
 (setq pulsar-delay 0.3)
 (setq pulsar-iterations 20)
-(setq pulsar-face 'pulsar-red)
+(setq pulsar-face 'pulsar-magenta)
 (setq pulsar-highlight-face 'pulsar-yellow)
 
 
@@ -63,3 +63,5 @@
 ;; integration with the built-in `bookmark':
 (add-hook 'bookmark-after-jump-hook #'pulsar-recenter-top)
 (add-hook 'bookmark-after-jump-hook #'pulsar-reveal-entry)
+
+(add-hook 'next-error-hook #'pulsar-pulse-line)

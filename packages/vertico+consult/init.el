@@ -29,7 +29,7 @@
          ;; ("C-c m" . consult-mode-command)
          ;; ("C-c k" . consult-kmacro)
          ;; C-x bindings (ctl-x-map)
-	 ("<f7>" . consult-theme)
+	 ("<f5>" . consult-theme)
          ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
          ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
          ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window

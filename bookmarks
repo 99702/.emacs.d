@@ -1,0 +1,21 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("(elisp) Lisp Data Types"
+ (front-context-string)
+ (rear-context-string . "t be modified.\n\n")
+ (position . 99666)
+ (last-modified 25384 37843 442345 890000)
+ (filename . "/home/kali/programs/emacs/share/info/elisp")
+ (info-node . "Lisp Data Types")
+ (handler . Info-bookmark-jump))
+("(elisp) Top"
+ (front-context-string . "     included in")
+ (rear-context-string . " the license is\n")
+ (position . 1709)
+ (last-modified 25384 37332 426864 277000)
+ (filename . "/home/kali/programs/emacs/share/info/elisp")
+ (info-node . "Top")
+ (handler . Info-bookmark-jump))
+)

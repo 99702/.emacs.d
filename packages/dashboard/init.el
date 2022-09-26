@@ -7,7 +7,7 @@
 (setq dashboard-startup-banner "/home/kali/.emacs.d/logo/default.png")
 (setq dashboard-center-content t)
 (setq dashboard-set-footer nil)
-(setq dashboard-items '((projects . 10)
+(setq dashboard-items '((projects . 30)
 			(recents  . 5)
                         ;; (bookmarks . 3)
                         ))
