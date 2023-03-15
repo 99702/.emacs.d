@@ -9,7 +9,7 @@
 (evil-mode 1)
 (evil-collection-init)
 
-(evil-set-leader nil (kbd "SPC"))
+;; (evil-set-leader nil (kbd "SPC"))
 (evil-set-leader 'normal (kbd "SPC"))
 
 ;; save
@@ -76,3 +76,37 @@
 (define-key evil-normal-state-map (kbd "<leader>n") 'evil-jump-item)
 
 
+
+;; Evil snipe start 
+(use-package evil-snipe)
+(evil-snipe-override-mode 1)
+;; Evil snipe end
+
+
+;; Evil mc start 
+(use-package evil-mc)
+(global-evil-mc-mode  1) ;; enable
+(evil-define-key 'visual evil-mc-key-map
+  "A" #'evil-mc-make-cursor-in-visual-selection-end
+  "I" #'evil-mc-make-cursor-in-visual-selection-beg)
+;; Evil mc end
+
+;; Evil matchit start
+(use-package evil-matchit)
+(global-evil-matchit-mode 1)
+
+;; Evil matchit end
+
+;; Evil googles start
+(use-package evil-goggles
+  :ensure t
+  :config
+  (evil-goggles-mode)
+
+  ;; optionally use diff-mode's faces; as a result, deleted text
+  ;; will be highlighed with `diff-removed` face which is typically
+  ;; some red color (as defined by the color theme)
+  ;; other faces such as `diff-added` will be used for other actions
+  (evil-goggles-use-diff-faces))
+
+;; Evil googles end

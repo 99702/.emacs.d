@@ -116,6 +116,14 @@
    consult--source-project-recent-file
    :preview-key (kbd "M-."))
 
+  (consult-customize
+   consult-ripgrep
+   :preview-key '(:debounce 0.2 any)
+   consult-git-grep consult-grep
+   consult-bookmark consult-recent-file consult-xref
+   consult--source-bookmark consult--source-recent-file
+   consult--source-project-recent-file
+   :preview-key (kbd "M-."))
   ;; Optionally configure the narrowing key.
   ;; Both < and C-+ work reasonably well.
   (setq consult-narrow-key "<") ;; (kbd "C-+")

@@ -14,8 +14,8 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (delete-selection-mode 1)
-(scroll-lock-mode 1)
-(pixel-scroll-precision-mode 1)
+;; (scroll-lock-mode 1)
+;; (pixel-scroll-precision-mode 1)
 (setq show-paren-style 'expression)
 (set-fringe-mode 0)
 (set-language-environment "UTF-8")
@@ -149,8 +149,9 @@
 (display-time-mode 1)
 
 ;;use spaces instead of tabs
-(setq indent-tabs-mode nil)
-(setq-default c-basic-offset 4)
+(setq indent-tabs-mode t)
+(setq typescript-indent-level 2)
+;; (setq-default c-basic-offset 0)
 
 ;; enable date time
 (display-time)
@@ -181,3 +182,27 @@ F5 again will unset 'selective-display' by setting it to 0."
 ;; (global-tab-line-mode)
 ;; (setq tab-line-close-button-show nil)  ;; do not show close button
 ;; (setq tab-line-separator "")  ;; set it to empty
+
+
+
+;;;;  scroolling
+;; (display-battery-mode 1)
+;; (setq
+;;  scroll-conservatively 1000                     ;; only 'jump' when moving this far
+;;  scroll-margin 4                                ;; scroll N lines to screen edge
+;;  scroll-step 1                                  ;; keyboard scroll one line at a time
+;;  mouse-wheel-scroll-amount '(6 ((shift) . 1))   ;; mouse scroll N lines
+;;  mouse-wheel-progressive-speed nil              ;; don't accelerate scrolling
+
+;;  redisplay-dont-pause t                         ;; don't pause display on input
+
+;;  ;; Always redraw immediately when scrolling,
+;;  ;; more responsive and doesn't hang!
+;;  fast-but-imprecise-scrolling nil
+;;  jit-lock-defer-time 0
+;;  )
+
+;; hide emacs customize
+(setq custom-file "~/.emacs.d/custom.el")
+(when (file-exists-p custom-file)
+  (load custom-file))

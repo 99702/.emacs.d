@@ -82,4 +82,4 @@
   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
   (setq completion-styles '(orderless basic)
         completion-category-defaults nil
-        completion-category-overrides '((lsp (styles orderless)))))
+        completion-category-overrides '((eglot (styles orderless)))))

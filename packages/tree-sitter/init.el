@@ -11,8 +11,7 @@
 (tree-sitter-require 'go)
 (tree-sitter-require 'css)
 (tree-sitter-require 'jsdoc)
-
+;; (use-package tree-sitter-latex)
 ;; enable syntax highlighting whenever possible
 (global-tree-sitter-mode)
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
-

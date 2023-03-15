@@ -1,72 +1,77 @@
-;;; lsp performancer
-(setq comp-speed 3)
-(setq gc-cons-threshold 100000000)
-(setq read-process-output-max (* 1024 1024)) ;; 1mb
-(load "~/.emacs.d/packages/eglot/init.el")
+(add-hook 'typescript-ts-mode 'eglot-ensure)
+(add-hook 'javascript-mode 'eglot-ensure)
+(add-hook 'typescript-mode 'eglot-ensure)
+(add-hook 'html-mode 'eglot-ensure)
+(add-hook 'js-ts-mode 'eglot-ensure)
+(add-hook 'tsx-ts-mode 'eglot-ensure)
+(add-hook 'js-mode 'eglot-ensure)
 
-;;;;;;;;;;; company-mode start;;;;;;;;;;;;;;;;;;;;;;;
-(use-package company
-  :after lsp-mode
-  :hook (lsp-mode . company-mode)
-  :bind (:map company-active-map
-         ("<tab>" . company-complete-selection))
-        (:map lsp-mode-map
-         ("<tab>" . company-indent-or-complete-common))
+
+;; corfu , cape , orderless setup start
+
+(use-package corfu
+  ;; Optional customizations
   :custom
-  (company-minimum-prefix-length 1) 
-  (company-idle-delay 0.0)
+  (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
+  (corfu-auto t)                 ;; Enable auto completion
+  ;; (corfu-auto-prefix 1)
+  ;; (corfu-auto-delay 0.0)
+  ;; (completion-styles '(orderless-fast))
+  ;; (corfu-separator ?\s)          ;; Orderless field separator
+  ;; (corfu-quit-at-boundary 'separator)   ;; Never quit at completion boundary
+  ;; (corfu-quit-no-match 'separator)      ;; Never quit, even if there is no match
+  ;; (corfu-preview-current nil)    ;; Disable current candidate preview
+  (corfu-preselect 'prompt)      ;; Preselect the prompt
+  ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
+  ;; (corfu-scroll-margin 5)        ;; Use scroll margin
+
+  ;; Enable Corfu only for certain modes.
+  ;; :hook ((prog-mode . corfu-mode)
+  ;;        (shell-mode . corfu-mode)
+  ;;        (eshell-mode . corfu-mode))
+
+  :bind
+  (:map corfu-map
+        ("TAB" . corfu-next)
+        ([tab] . corfu-next)
+        ("S-TAB" . corfu-previous)
+        ([backtab] . corfu-previous))
+
+  :init
+  (global-corfu-mode)
+  (corfu-history-mode)
   )
 
-(use-package company-box
-  :hook (company-mode . company-box-mode))
-;;;;;;;;;;; company-mode end;;;;;;;;;;;;;;;;;;;;;;;
+(use-package cape
 
-;;;;;;;;;;; lsp-mode start;;;;;;;;;;;;;;;;;;;;;;;
-;; breadcrump
-(defun efs/lsp-mode-setup ()
-  (setq lsp-headerline-breadcrump-segments '(path-up-to-project file symbols))
-  (lsp-headerline-breadcrumb-mode))
-
-(use-package lsp-mode
-	     :commands (lsp lsp-deferred)
   :init
-
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (
-         (javascript-mode . lsp)
-         (html-mode . lsp)
-         (css-mode . lsp)
-         (typescript-mode . lsp)
-         (python-mode . lsp)
-	 (vterm-mode . lsp)
-         (lsp-mode . lsp-enable-which-key-integration)
-	 (lsp-mode . efs/lsp-mode-setup))
-  :commands lsp
+  ;; Add `completion-at-point-functions', used by `completion-at-point'.
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  ;;(add-to-list 'completion-at-point-functions #'cape-history)
+  ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
+  ;;(add-to-list 'completion-at-point-functions #'cape-tex)
+  ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
+  ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
+  ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
+  ;;(add-to-list 'completion-at-point-functions #'cape-ispell)
+  ;;(add-to-list 'completion-at-point-functions #'cape-dict)
+  ;;(add-to-list 'completion-at-point-functions #'cape-symbol)
+  ;;(add-to-list 'completion-at-point-functions #'cape-line)
 )
 
-(use-package lsp-ui :commands lsp-ui-mode
-	     :hook (lsp-mode. lsp-ui-mode)
-	     :custom
-	     (setq lsp-ui-doc-position 'top)
-	     )
-(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-(use-package lsp-treemacs :commands lsp-treemacs-errors-list :after lsp)
-(use-package dap-mode)
-
-;;;;;;;;;;; lsp-mode end;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;;;;;;;;;;; typescript setup start;;;;;;;;;;;;;;;;;;;;;;;
-(use-package typescript-mode
-	     :mode "\\.ts\\'"
-	     :hook (typescript-mode . lsp-deferred)
-	     :config
-	     (setq typescript-indent-level 2))
+;; corfu setup end 
 
 
 
 
-;;;;;;;;;;; typescript setup start;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+
+
+
 
 
 
@@ -75,12 +80,15 @@
 (use-package clojure-mode)
 ;; (use-package rainbow-delimiters-mode)
 (use-package clojure-mode-extra-font-locking)
-(use-package aggressive-indent)
-(use-package smartparens)
+;; (use-package aggressive-indent)
+;; (use-package smartparens)
 (use-package cider)
 
 (add-hook 'clojure-mode-hook #'subword-mode)
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
 ;; (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+
+
+
 
