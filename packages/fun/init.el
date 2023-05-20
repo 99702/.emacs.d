@@ -74,7 +74,7 @@
 ;; (vuiet-album-info "steven wilson" "to the bone")
 ;; (vuiet-artist-info "steven wilson")
 
-(use-package skype)
-(setq skype--my-user-handle "rp813149@protonmail.com")
+;; (use-package skype)
+;; (setq skype--my-user-handle "rp813149@protonmail.com")
 ;; (use-package angular-snippets)
-(use-package ac-html-angular)
+;; (use-package ac-html-angular)

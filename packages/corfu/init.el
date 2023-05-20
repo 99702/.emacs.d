@@ -76,6 +76,7 @@
 ;;          ("C-M-/" . dabbrev-expand)))
 
 (use-package orderless
+  :straight t
   :init
   ;; Configure a custom style dispatcher (see the Consult wiki)
   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)

@@ -1,7 +1,9 @@
 ;;; vterm https://github.com/akermu/emacs-libvterm
 (use-package vterm
+  :straight t
     :ensure t)
 (use-package vterm-toggle
+  :straight t
   :ensure t)
 
 (keymap-global-set "C-x t v" 'vterm-toggle)

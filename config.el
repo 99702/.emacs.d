@@ -73,28 +73,28 @@
 
 
 ;; change modeline
-(setq modus-themes-region '(bg-only))
-(setq modus-themes-completions '((matches . (extrabold))
-                                 (selection . (semibold accented))
-                                 (popup . (accented intense))))
+;;(setq modus-themes-region '(bg-only))	;I
+;; (setq modus-themes-completions '((matches . (extrabold))
+;;                                  (selection . (semibold accented))
+;;                                  (popup . (accented intense))))
 
-(setq modus-themes-bold-constructs t)
-(setq modus-themes-italic-constructs t)
-(setq modus-themes-paren-match '(bold intense))
-(setq modus-themes-syntax '(alt-syntax green-strings))
-(load-theme 'modus-operandi)
-(modus-themes-load-themes)
+;; (setq modus-themes-bold-constructs t)
+;; (setq modus-themes-italic-constructs t)
+;; (setq modus-themes-paren-match '(bold intense))
+;; (setq modus-themes-syntax '(alt-syntax green-strings))
+;; (load-theme 'modus-operandi)
+;; (modus-themes-load-themes)
 
 ;;make comments grayish
-(defun my-modus-themes-custom-faces ()
-  (modus-themes-with-colors
-    (custom-set-faces
-     ;; your custom face overrides here
-     `(font-lock-comment-face ((,class :background ,bg-alt)))
-     )))
+;; (defun my-modus-themes-custom-faces ()
+;;   (modus-themes-with-colors
+;;     (custom-set-faces
+;;      ;; your custom face overrides here
+;;      `(font-lock-comment-face ((,class :background ,bg-alt)))
+;;      )))
 
-(add-hook 'modus-themes-after-load-theme-hook #'my-modus-themes-custom-faces)
-(modus-themes-load-operandi)
+;; (add-hook 'modus-themes-after-load-theme-hook #'my-modus-themes-custom-faces)
+;; (modus-themes-load-operandi)
 
 
 ;;;;; enable tab bar mode

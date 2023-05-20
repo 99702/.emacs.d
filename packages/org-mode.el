@@ -30,6 +30,7 @@
   (visual-line-mode 1))
 
 (use-package org
+  :straight t
   :hook (org-mode . efs/org-mode-setup)
   :config
   (setq org-ellipsis " ▾")
@@ -38,8 +39,11 @@
   (efs/org-font-setup))
 
 
-(use-package org-bullets :hook (org-mode . org-bullets-mode))
+(use-package org-bullets
+  :straight t
+  :hook (org-mode . org-bullets-mode))
 (use-package org-fancy-priorities
+  :straight t
   :ensure t
   :hook
   (org-mode . org-fancy-priorities-mode)

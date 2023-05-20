@@ -1,5 +1,6 @@
 ;;; https://gitlab.com/protesilaos/pulsar/
 (use-package pulsar
+  :straight t
   :ensure t)
 (customize-set-variable
  'pulsar-pulse-functions ; Read the doc string for why not `setq'

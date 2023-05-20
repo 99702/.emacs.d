@@ -3,6 +3,7 @@
 
 (use-package projectile
   :ensure t
+  :straight t
   :init
   (projectile-mode +1)
   :bind (:map projectile-mode-map

@@ -10,6 +10,7 @@
 ;; corfu , cape , orderless setup start
 
 (use-package corfu
+  :straight t
   ;; Optional customizations
   :custom
   (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
@@ -39,10 +40,12 @@
 
   :init
   (global-corfu-mode)
-  (corfu-history-mode)
+  ;; (corfu-history-mode)
   )
 
 (use-package cape
+
+  :straight t
 
   :init
   ;; Add `completion-at-point-functions', used by `completion-at-point'.
@@ -77,12 +80,18 @@
 
 
 ;;;;;;;;;;;;;;;; clojure mode
-(use-package clojure-mode)
+(use-package clojure-mode
+  :straight t
+  )
 ;; (use-package rainbow-delimiters-mode)
-(use-package clojure-mode-extra-font-locking)
+(use-package clojure-mode-extra-font-locking
+  :straight t
+  )
 ;; (use-package aggressive-indent)
 ;; (use-package smartparens)
-(use-package cider)
+(use-package cider
+  :straight t
+  )
 
 (add-hook 'clojure-mode-hook #'subword-mode)
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)

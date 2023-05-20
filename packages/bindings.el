@@ -1,7 +1,9 @@
 (use-package evil
+  :straight t
   :init
   (setq evil-want-keybinding nil))
 (use-package evil-collection
+  :straight t
   :init
   (setq evil-want-keybinding nil))
 
@@ -78,13 +80,17 @@
 
 
 ;; Evil snipe start 
-(use-package evil-snipe)
+(use-package evil-snipe
+  :straight t
+  )
 (evil-snipe-override-mode 1)
 ;; Evil snipe end
 
 
 ;; Evil mc start 
-(use-package evil-mc)
+(use-package evil-mc
+  :straight t
+  )
 (global-evil-mc-mode  1) ;; enable
 (evil-define-key 'visual evil-mc-key-map
   "A" #'evil-mc-make-cursor-in-visual-selection-end
@@ -92,7 +98,9 @@
 ;; Evil mc end
 
 ;; Evil matchit start
-(use-package evil-matchit)
+(use-package evil-matchit
+  :straight t
+  )
 (global-evil-matchit-mode 1)
 
 ;; Evil matchit end
@@ -100,6 +108,7 @@
 ;; Evil googles start
 (use-package evil-goggles
   :ensure t
+  :straight t
   :config
   (evil-goggles-mode)
 

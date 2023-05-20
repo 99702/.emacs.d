@@ -1,5 +1,6 @@
 ;;; which key https://github.com/justbur/emacs-which-key
 (use-package which-key
+  :straight t
   :defer 0
   :diminish which-key-mode
   :config

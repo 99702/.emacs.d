@@ -1,0 +1,4 @@
+/home/kali/.emacs.d/straight/build/vterm/build/CMakeFiles/vterm-module.dir
+/home/kali/.emacs.d/straight/build/vterm/build/CMakeFiles/run.dir
+/home/kali/.emacs.d/straight/build/vterm/build/CMakeFiles/edit_cache.dir
+/home/kali/.emacs.d/straight/build/vterm/build/CMakeFiles/rebuild_cache.dir

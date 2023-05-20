@@ -1,5 +1,6 @@
 ;;; treemacs https://github.com/Alexander-Miller/treemacs
 (use-package treemacs
+  :straight t
   :ensure t
   :defer t
   :init
@@ -82,22 +83,27 @@
   )
 
 (use-package treemacs-projectile
+  :straight t
   :after (treemacs projectile)
   :ensure t)
 
 (use-package treemacs-icons-dired
+  :straight t
   :hook (dired-mode . treemacs-icons-dired-enable-once)
   :ensure t)
 
 (use-package treemacs-evil
+  :straight t
   :after (treemacs)
   :ensure t)
 
 (use-package treemacs-magit
+  :straight t
   :after (treemacs magit)
   :ensure t)
 
 (use-package treemacs-persp ;;treemacs-perspective if you use perspective.el vs. persp-mode
+  :straight t
   :after (treemacs persp-mode) ;;or perspective vs. persp-mode
   :ensure t
   :config (treemacs-set-scope-type 'Perspectives))

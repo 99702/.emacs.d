@@ -1,4 +1,5 @@
 (use-package fontaine
+  :straight t
   :ensure t)
 
 ;; This is defined in Emacs C code: it belongs to font settings.

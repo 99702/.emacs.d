@@ -1,0 +1,1 @@
+/home/kali/.emacs.d/straight/repos/standard-themes/standard-light-theme.el
