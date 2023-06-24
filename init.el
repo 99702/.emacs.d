@@ -15,7 +15,7 @@
 (load "~/.emacs.d/packages/which-key/init.el")
 (load "~/.emacs.d/packages/vertico+consult/init.el")
 (load "~/.emacs.d/packages/restclient.el/init.el")
-(load "~/.emacs.d/packages/autex/init.el")
+;; (load "~/.emacs.d/packages/autex/init.el")
 (load "~/.emacs.d/packages/corfu/init.el")
 (load "~/.emacs.d/packages/fun/init.el")
 (load "~/.emacs.d/packages/org-mode.el")
