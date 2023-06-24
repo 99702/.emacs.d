@@ -26,8 +26,6 @@ evaluate `evil-mc-mode'.
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
-\\{evil-mc-key-map}
-
 (fn &optional ARG)" t)
 (put 'global-evil-mc-mode 'globalized-minor-mode t)
 (defvar global-evil-mc-mode nil "\

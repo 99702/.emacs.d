@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/kali/.emacs.d/straight/build/vterm/CMakeLists.txt"
-  "CMakeFiles/3.26.3/CMakeCCompiler.cmake"
-  "CMakeFiles/3.26.3/CMakeSystem.cmake"
+  "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
+  "CMakeFiles/3.26.4/CMakeSystem.cmake"
   "/usr/share/cmake/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
@@ -93,9 +93,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.26.3/CMakeSystem.cmake"
-  "CMakeFiles/3.26.3/CMakeCCompiler.cmake"
-  "CMakeFiles/3.26.3/CMakeCCompiler.cmake"
+  "CMakeFiles/3.26.4/CMakeSystem.cmake"
+  "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
+  "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

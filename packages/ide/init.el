@@ -1,13 +1,15 @@
 (add-hook 'typescript-ts-mode 'eglot-ensure)
 (add-hook 'javascript-mode 'eglot-ensure)
 (add-hook 'typescript-mode 'eglot-ensure)
+(add-hook 'html-ts-mode 'eglot-ensure)
+(add-hook 'typescript-ts-mode 'eglot-ensure)
 (add-hook 'html-mode 'eglot-ensure)
 (add-hook 'js-ts-mode 'eglot-ensure)
 (add-hook 'tsx-ts-mode 'eglot-ensure)
 (add-hook 'js-mode 'eglot-ensure)
 
 
-;; corfu , cape , orderless setup start
+;; corfu , cape , kind-icon orderless setup start
 
 (use-package corfu
   :straight t
@@ -42,6 +44,15 @@
   (global-corfu-mode)
   ;; (corfu-history-mode)
   )
+
+(use-package kind-icon
+  :straight t
+  :ensure t
+  :after corfu
+  :custom
+  (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
+  :config
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 
 (use-package cape
 
@@ -98,6 +109,57 @@
 ;; (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 
+(use-package eglot-java)
+(add-hook 'java-mode-hook 'eglot-java-mode)
+(add-hook 'eglot-java-mode-hook (lambda ()                                        
+  (define-key eglot-java-mode-map (kbd "C-c l n") #'eglot-java-file-new)
+  (define-key eglot-java-mode-map (kbd "C-c l x") #'eglot-java-run-main)
+  (define-key eglot-java-mode-map (kbd "C-c l t") #'eglot-java-run-test)
+  (define-key eglot-java-mode-map (kbd "C-c l N") #'eglot-java-project-new)
+  (define-key eglot-java-mode-map (kbd "C-c l T") #'eglot-java-project-build-task)
+  (define-key eglot-java-mode-map (kbd "C-c l R") #'eglot-java-project-build-refresh)))
+;; (setq eglot-server-programs
+;;       '((java-mode . ("java" "-jar" "/home/kali/.emacs.d/java/eclipse.jdt.ls"))))
 
+;; (defvar +eglot/initialization-options-map (make-hash-table :size 5))
 
+;; (cl-defmethod eglot-initialization-options ((server eglot-lsp-server))
+;;     (if-let ((init-options (gethash (eglot--major-mode server) +eglot/initialization-options-map)))
+;;         init-options
+;;       eglot--{}))
 
+;; (add-to-list 'eglot-server-programs
+;;                `(java-mode "jdtls"
+;;                            "-configuration" ,(expand-file-name "cache/language-server/java/jdtls/config_linux" user-emacs-directory)
+;;                            "-data" ,(expand-file-name "cache/java-workspace" user-emacs-directory)
+;;                            ,(concat "--jvm-arg=-javaagent:" (expand-file-name "~/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar"))))
+
+;; (puthash 'java-mode
+;;            `(:settings
+;;              (:java
+;;               (:configuration
+;;                (:runtime [(:name "JavaSE-1.8" :path "/usr/local/jdk-8")
+;;                           (:name "JavaSE-11" :path "/usr/local/graalvm-ce-java11-22.0.0.2")
+;;                           (:name "JavaSE-17" :path "/usr/local/graalvm-ce-java17-22.0.0.2" :default t)])
+;;                :format (:settings (:url ,(expand-file-name (locate-user-emacs-file "cache/eclipse-java-google-style.xml"))
+;;                                         :profile "GoogleStyle"))
+;;                ;; NOTE: https://github.com/redhat-developer/vscode-java/issues/406#issuecomment-356303715
+;;                ;; > We enabled it by default so that workspace-wide errors can be reported (eg. removing a public method in one class would cause compilation errors in other files consuming that method).
+;;                ;; for large workspaces, it may make sense to be able to disable autobuild if it negatively impacts performance.
+;;                :autobuild (:enabled t)
+;;                ;; https://github.com/dgileadi/vscode-java-decompiler
+;;                :contentProvider (:preferred "fernflower")))
+;;              ;; WIP: support non standard LSP `java/classFileContents', `Location' items that have a `jdt://...' uri
+;;              ;; https://github.com/eclipse/eclipse.jdt.ls/issues/1384
+;;              ;; nvim impl demo: https://github.com/mfussenegger/dotfiles/commit/3cddf73cd43120da2655e2df6d79bdfd06697f0e
+;;              ;; lsp-java impl demo: https://github.com/emacs-lsp/lsp-java/blob/master/lsp-java.el
+;;              :extendedClientCapabilities (:classFileContentsSupport t)
+;;              ;; bundles: decompilers, etc.
+;;              ;; https://github.com/dgileadi/dg.jdt.ls.decompiler
+;;              :bundles ,(let ((bundles-dir (expand-file-name (locate-user-emacs-file "cache/language-server/java/bundles" user-emacs-directory)))
+;;                              jdtls-bundles)
+;;                          (->> (when (file-directory-p bundles-dir)
+;;                                 (directory-files bundles-dir t "\\.jar$"))
+;;                               (append jdtls-bundles)
+;;                               (apply #'vector))))
+;;            +eglot/initialization-options-map)

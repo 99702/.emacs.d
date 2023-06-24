@@ -57,6 +57,16 @@
 (put 'ef-duo-light 'theme-properties '(:background-mode light :kind color-scheme :family ef))
 
 
+;;; Generated autoloads from ef-elea-dark-theme.el
+
+(put 'ef-elea-dark 'theme-properties '(:background-mode dark :kind color-scheme :family ef))
+
+
+;;; Generated autoloads from ef-elea-light-theme.el
+
+(put 'ef-elea-light 'theme-properties '(:background-mode light :kind color-scheme :family ef))
+
+
 ;;; Generated autoloads from ef-frost-theme.el
 
 (put 'ef-frost 'theme-properties '(:background-mode light :kind color-scheme :family ef))
@@ -126,7 +136,7 @@ Run `ef-themes-post-load-hook' after loading the theme.
 Also see `ef-themes-select-light'.
 
 This command is the same as `ef-themes-select' except it only
-prompts for light themes when called interactively.  Calling it
+prompts for dark themes when called interactively.  Calling it
 from Lisp behaves the same as `ef-themes-select' for the THEME
 argument, meaning that it loads the Ef THEME regardless of
 whether it is light or dark.

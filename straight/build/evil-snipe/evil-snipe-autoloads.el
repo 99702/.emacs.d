@@ -49,8 +49,6 @@ evaluate `evil-snipe-local-mode'.
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
-\\{evil-snipe-local-mode-map}
-
 (fn &optional ARG)" t)
 (autoload 'evil-snipe-override-local-mode "evil-snipe" "\
 Override evil-mode's f/F/t/T/;/, motions.
@@ -69,8 +67,6 @@ evaluate `evil-snipe-override-local-mode'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
-
-\\{evil-snipe-override-local-mode-map}
 
 (fn &optional ARG)" t)
 (put 'evil-snipe-mode 'globalized-minor-mode t)

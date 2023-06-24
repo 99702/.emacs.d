@@ -1,4 +1,4 @@
-(load "~/.emacs.d/packages/initialize.el")
+(load "~/.emacs.d/packages/initialize.el") 
 (load "~/.emacs.d/packages/bindings.el")
 (load "~/.emacs.d/config.el")
 (load "~/.emacs.d/packages/UI/init.el")
@@ -8,20 +8,23 @@
 (load "~/.emacs.d/packages/all-the-icons/init.el")
 (load "~/.emacs.d/packages/dashboard/init.el")
 (load "~/.emacs.d/packages/projectile/init.el")
-(load "~/.emacs.d/packages/treemacs/init.el")
 (load "~/.emacs.d/packages/expand-region/init.el")
 (load "~/.emacs.d/packages/marginalia/init.el")
 (load "~/.emacs.d/packages/vterm/init.el")
-;; (load "~/.emacs.d/packages/tree-sitter/init.el")
+(load "~/.emacs.d/packages/tree-sitter/init.el")
 (load "~/.emacs.d/packages/which-key/init.el")
 (load "~/.emacs.d/packages/vertico+consult/init.el")
 (load "~/.emacs.d/packages/restclient.el/init.el")
-;; (load "~/.emacs.d/packages/autex/init.el")
+(load "~/.emacs.d/packages/autex/init.el")
 (load "~/.emacs.d/packages/corfu/init.el")
 (load "~/.emacs.d/packages/fun/init.el")
-(load "~/.emacs.d/packages/custom.el")
 (load "~/.emacs.d/packages/org-mode.el")
 
+(load "~/.emacs.d/packages/treemacs/init.el")
+(load "~/.emacs.d/packages/doom-modeline/init.el")
+;; (load "~/.emacs.d/packages/sidebar.el/init.el")
 
 
 (load "~/.emacs.d/packages/ide/init.el") 
+(setenv "GTK_THEME" "Adwaita:dark")
+

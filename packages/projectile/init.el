@@ -10,6 +10,8 @@
 	      ("\C-c p" . projectile-command-map)
 	      )
 )
+(use-package ripgrep 
+  :straight t)
 
 ;; map key bindings for projectile
 ;; (global-set-key "\C-o" 'projectile-find-file)

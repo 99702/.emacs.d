@@ -1,3 +1,5 @@
+;; (define-key global-map [C-mouse-2] 'eglot-find-implementation)
+
 ;; (use-package eglot
 ;;   :ensure t)
 

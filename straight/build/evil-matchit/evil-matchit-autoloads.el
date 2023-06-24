@@ -102,8 +102,6 @@ evaluate `evil-matchit-mode'.
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
-\\{evil-matchit-mode-map}
-
 (fn &optional ARG)" t)
 (autoload 'turn-on-evil-matchit-mode "evil-matchit-evil-setup" "\
 Enable the minor mode in the current buffer.")

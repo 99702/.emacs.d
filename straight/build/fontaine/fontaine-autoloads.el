@@ -43,7 +43,12 @@ the post `load-theme' phase (e.g. via a hook) ensures that font
 configurations remain consistent.
 
 Some themes that provide hooks of this sort are the
-`modus-themes' and `ef-themes' (both by Protesilaos)." t)
+`modus-themes', `ef-themes', `standard-themes' (all by
+Protesilaos).  Alternatively, Emacs 29 provides the special
+`enable-theme-functions' hook, which passes the THEME argument
+for this function.
+
+(fn &optional THEME)" t)
 (autoload 'fontaine-set-face-font "fontaine" "\
 Set font and/or other attributes of FACE.
 

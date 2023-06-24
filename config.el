@@ -151,6 +151,7 @@
 ;;use spaces instead of tabs
 (setq indent-tabs-mode t)
 (setq typescript-indent-level 2)
+(setq js-indent-level 2)
 ;; (setq-default c-basic-offset 0)
 
 ;; enable date time
@@ -206,3 +207,10 @@ F5 again will unset 'selective-display' by setting it to 0."
 (setq custom-file "~/.emacs.d/custom.el")
 (when (file-exists-p custom-file)
   (load custom-file))
+
+;; ignore \n irritating electric-indent-mode
+(setq electric-indent-chars (delq ?\n electric-indent-chars))
+
+
+;; disable the display of warnings
+(setq warning-minimum-level :emergency)

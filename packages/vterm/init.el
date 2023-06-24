@@ -18,3 +18,10 @@
                 (window-height . 0.2)))
 
 (define-key vterm-mode-map (kbd "C-x t v")   'vterm-toggle)
+
+;; hide modeline in vterm
+(defun hide-modeline-in-vterm ()
+  "Hide the modeline in vterm buffers."
+  (setq-local mode-line-format nil))
+
+(add-hook 'vterm-mode-hook 'hide-modeline-in-vterm)
