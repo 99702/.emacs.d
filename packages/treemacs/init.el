@@ -123,7 +123,7 @@
 'treemacs-mode-hook
 (defun change-hl-line-mode ()
   (interactive)
-(setq-local hl-line-face 'modus-themes-link-broken)
+;; (setq-local hl-line-face 'modus-themes-link-broken)
 (overlay-put hl-line-overlay 'face hl-line-face)
 (treemacs--setup-icon-background-colors)))
 ;; this is the man

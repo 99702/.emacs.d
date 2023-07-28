@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/jsonrpc/jsonrpc.el

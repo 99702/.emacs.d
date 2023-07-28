@@ -1,0 +1,1 @@
+/home/kali/.emacs.d/straight/repos/lsp-ui/lsp-ui-doc.el

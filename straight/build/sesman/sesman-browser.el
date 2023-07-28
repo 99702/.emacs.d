@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/sesman/sesman-browser.el

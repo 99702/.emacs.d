@@ -51,3 +51,26 @@
             (setq file (concat file "/")))
       (setq file default-directory))
     (start-process "nautilus" nil "nautilus" file)))
+
+;;;  set y-or-n-p instead of yes-or-no-p
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+
+;; https://github.com/ankurdave/color-identifiers-mode (coder-identifiers-mode)
+;; (use-package color-identifiers-mode
+;;   :straight (:type git :host github :repo "ankurdave/color-identifiers-mode"))
+;; (add-hook 'after-init-hook 'global-color-identifiers-mode)
+
+;;; parrot mode
+(use-package parrot
+  :straight (:type git :host github :repo "dp12/parrot")
+  :config
+  (parrot-mode))
+
+(setq parrot-types '(confused emacs nyan rotating science thumbsup))
+(defun cycle-parrot-type ()
+  (interactive)
+  (let ((next-type (car parrot-types)))
+    (parrot-set-parrot-type next-type)
+    (setq parrot-types (append (cdr parrot-types) (list next-type)))))
+

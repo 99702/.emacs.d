@@ -30,7 +30,7 @@
       doom-modeline-minor-modes nil
       doom-modeline-enable-word-count nil
       doom-modeline-continuous-word-count-modes '(markdown-mode gfm-mode org-mode)
-      doom-modeline-buffer-encoding t
+      doom-modeline-buffer-encoding nil
       doom-modeline-indent-info nil
       doom-modeline-checker-simple-format t
       doom-modeline-number-limit 99
@@ -49,18 +49,18 @@
       doom-modeline-irc t
       doom-modeline-irc-stylize 'identity
       doom-modeline-battery t
-      doom-modeline-time t
-      doom-modeline-display-misc-in-all-mode-lines t
-      doom-modeline-env-version t
-      doom-modeline-env-enable-python t
-      doom-modeline-env-enable-ruby t
-      doom-modeline-env-enable-perl t
-      doom-modeline-env-enable-go t
-      doom-modeline-env-enable-elixir t
-      doom-modeline-env-enable-rust t
-      doom-modeline-env-load-string "..."
+      doom-modeline-time nil
+      doom-modeline-display-misc-in-all-mode-lines nil
+      doom-modeline-env-version nil
+      doom-modeline-env-enable-python nil
+      doom-modeline-env-enable-ruby nil
+      doom-modeline-env-enable-perl nil
+      doom-modeline-env-enable-go nil
+      doom-modeline-env-enable-elixir nil
+      doom-modeline-env-enable-rust nil
+      doom-modeline-env-load-string "🍆"
       doom-modeline-always-visible-segments '(mu4e irc)
       doom-modeline-before-update-env-hook nil
       doom-modeline-after-update-env-hook nil
 )
-(display-battery-mode t)
+(display-battery-mode 1)

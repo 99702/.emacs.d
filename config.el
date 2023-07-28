@@ -19,11 +19,11 @@
 (setq show-paren-style 'expression)
 (set-fringe-mode 0)
 (set-language-environment "UTF-8")
-(set-face-attribute 'default nil
-		    :family "Iosevka Comfy"
-		    ;; :height 110
-		    :weight 'regular
-		    :width 'normal)
+;; (set-face-attribute 'default nil
+;; 		    :family "Iosevka Comfy"
+;; 		    ;; :height 110
+;; 		    :weight 'regular
+;; 		    :width 'normal)
 (electric-pair-mode t)
 
 
@@ -47,8 +47,10 @@
 (setq auto-save-default nil) 
 
 
-;;display line number
+;;display line number / relative line number
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
+
 (setq linum-format "%3d ")
 
 ;; make ESC quit prompts
@@ -82,7 +84,6 @@
 ;; (setq modus-themes-italic-constructs t)
 ;; (setq modus-themes-paren-match '(bold intense))
 ;; (setq modus-themes-syntax '(alt-syntax green-strings))
-;; (load-theme 'modus-operandi)
 ;; (modus-themes-load-themes)
 
 ;;make comments grayish
@@ -214,3 +215,10 @@ F5 again will unset 'selective-display' by setting it to 0."
 
 ;; disable the display of warnings
 (setq warning-minimum-level :emergency)
+
+
+;; dired hide details
+(add-hook 'dired-mode-hook 'dired-hide-details-mode)
+
+;; jump to next opposite when end buffer
+(setq windmove-wrap-around t)

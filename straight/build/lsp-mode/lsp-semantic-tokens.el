@@ -1,0 +1,1 @@
+/home/kali/.emacs.d/straight/repos/lsp-mode/lsp-semantic-tokens.el

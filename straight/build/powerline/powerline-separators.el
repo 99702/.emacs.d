@@ -1,0 +1,1 @@
+/home/kali/.emacs.d/straight/repos/powerline/powerline-separators.el

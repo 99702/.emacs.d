@@ -2,10 +2,30 @@
   :straight t
   :init
   (setq evil-want-keybinding nil))
+
 (use-package evil-collection
   :straight t
   :init
   (setq evil-want-keybinding nil))
+
+;; Evil sorround start
+(use-package evil-surround
+  :straight t
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
+
+;; Evil matchit start
+(use-package evil-matchit
+  :straight t
+  )
+(global-evil-matchit-mode 1)
+
+;; Evil string inflectionstart
+(use-package evil-string-inflection 
+:ensure t
+:straight t)
+
 
 ;; leader keys
 (evil-mode 1)
@@ -26,6 +46,7 @@
 ;; toggle commands
 (evil-define-key nil 'global (kbd "<leader>tt") 'treemacs)
 (evil-define-key nil 'global (kbd "<leader>mv") 'vterm-toggle)
+(evil-define-key nil 'global (kbd "<leader>mp") 'projectile-run-vterm-other-window)
 
 (evil-define-key nil 'global (kbd "<leader>cf") 'fontaine-set-preset)
 (evil-define-key nil 'global (kbd "<f5>") 'modus-themes-toggle)
@@ -80,42 +101,21 @@
 
 
 ;; Evil snipe start 
-(use-package evil-snipe
-  :straight t
-  )
-(evil-snipe-override-mode 1)
+;; (use-package evil-snipe
+;;   :straight t
+;;   )
+;; (evil-snipe-override-mode 1)
 ;; Evil snipe end
 
 
 ;; Evil mc start 
-(use-package evil-mc
-  :straight t
-  )
-(global-evil-mc-mode  1) ;; enable
-(evil-define-key 'visual evil-mc-key-map
-  "A" #'evil-mc-make-cursor-in-visual-selection-end
-  "I" #'evil-mc-make-cursor-in-visual-selection-beg)
+;; (use-package evil-mc
+;;   :straight t
+;;   )
+;; (global-evil-mc-mode  1) ;; enable
+;; (evil-define-key 'visual evil-mc-key-map
+;;   "A" #'evil-mc-make-cursor-in-visual-selection-end
+;;   "I" #'evil-mc-make-cursor-in-visual-selection-beg)
 ;; Evil mc end
 
-;; Evil matchit start
-(use-package evil-matchit
-  :straight t
-  )
-(global-evil-matchit-mode 1)
 
-;; Evil matchit end
-
-;; Evil googles start
-(use-package evil-goggles
-  :ensure t
-  :straight t
-  :config
-  (evil-goggles-mode)
-
-  ;; optionally use diff-mode's faces; as a result, deleted text
-  ;; will be highlighed with `diff-removed` face which is typically
-  ;; some red color (as defined by the color theme)
-  ;; other faces such as `diff-added` will be used for other actions
-  (evil-goggles-use-diff-faces))
-
-;; Evil googles end

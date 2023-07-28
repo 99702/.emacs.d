@@ -102,9 +102,11 @@ INITIAL is the initial input.
 (autoload 'consult-goto-line "consult" "\
 Read line number and jump to the line with preview.
 
-Jump directly if a line number is given as prefix ARG.  The command respects
-narrowing and the settings `consult-goto-line-numbers' and
-`consult-line-numbers-widen'.
+Enter either a line number to jump to the first column of the
+given line or line:column in order to jump to a specific column.
+Jump directly if a line number is given as prefix ARG.  The
+command respects narrowing and the settings
+`consult-goto-line-numbers' and `consult-line-numbers-widen'.
 
 (fn &optional ARG)" t)
 (autoload 'consult-recent-file "consult" "\

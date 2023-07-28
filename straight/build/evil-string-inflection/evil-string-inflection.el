@@ -1,0 +1,1 @@
+/home/kali/.emacs.d/straight/repos/evil-string-inflection/evil-string-inflection.el

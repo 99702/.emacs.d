@@ -1,0 +1,1 @@
+/home/kali/.emacs.d/straight/repos/tide/tsserver/lib.decorators.d.ts

@@ -32,3 +32,5 @@
   :config
   (setq straight-use-package-by-default t))
 
+
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
