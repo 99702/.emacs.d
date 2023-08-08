@@ -74,3 +74,12 @@
     (parrot-set-parrot-type next-type)
     (setq parrot-types (append (cdr parrot-types) (list next-type)))))
 
+
+;; type break
+;; (type-break interval (* 25 60)) ;; 25 minutes
+;; (type-break-good-rest-interval (* 9 60)) ;; 9 minutes
+;; (type-break-good-break-interval (* 5 60))
+;; (type-break-query-mode t)
+;; (type-break-keystroke-threshold '(nil . 2625))
+;; (type-break-demo-boring-stats t)
+;; (type-break-demo-functions '(type-break-demo-boring))
