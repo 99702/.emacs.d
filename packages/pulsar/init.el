@@ -43,7 +43,7 @@
 (setq pulsar-pulse t)
 (setq pulsar-delay 0.055)
 (setq pulsar-iterations 20)
-(setq pulsar-face 'pulsar-cyan)
+(setq pulsar-face 'pulsar-red)
 ;; (setq pulsar-highlight-face 'pulsar-yellow)
 (add-hook 'next-error-hook #'pulsar-pulse-line-red)
 (pulsar-global-mode 1)

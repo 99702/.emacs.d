@@ -168,28 +168,28 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; lsp-mode ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (use-package lsp-mode
-;;   :ensure t
-;;   :commands lsp
-;;   :hook ((typescript-mode js-mode web-mode typescript-ts-mode javascript-mode js-mode mhtml-mode) . lsp)
-;;   :init (setq lsp-prefer-flymake nil))
-;; (setq lsp-headerline-breadcrumb-enable nil)
+(use-package lsp-mode
+  :ensure t
+  :commands lsp
+  :hook ((typescript-mode js-mode web-mode typescript-ts-mode javascript-mode js-mode mhtml-mode) . lsp)
+  :init (setq lsp-prefer-flymake nil))
+(setq lsp-headerline-breadcrumb-enable nil)
 
 ;; optionally
-;; (use-package lsp-ui 
-;;   :straight t
-;;   :commands lsp-ui-mode)
+(use-package lsp-ui 
+  :straight t
+  :commands lsp-ui-mode)
 ;; if you are ivy user
-;; (use-package lsp-ivy 
-;;   :straight t
-;;   :commands lsp-ivy-workspace-symbol)
-;; (use-package lsp-treemacs 
-;;   :straight t
-;;   :commands lsp-treemacs-errors-list)
+(use-package lsp-ivy 
+  :straight t
+  :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs 
+  :straight t
+  :commands lsp-treemacs-errors-list)
 
 ;; optionally if you want to use debugger
-;; (setq gc-cons-threshold 100000000)
-;; (setq lsp-log-io nil) ; if set to true can cause a performance hit
+(setq gc-cons-threshold 100000000)
+(setq lsp-log-io nil) ; if set to true can cause a performance hit
 
 
 ;; prettier js (apheleia)

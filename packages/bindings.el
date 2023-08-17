@@ -119,3 +119,6 @@
 ;; Evil mc end
 
 
+(evil-define-key nil  global-map (kbd "M-1") 'tab-bar-select-tab 0)
+(evil-define-key nil  global-map (kbd "M-2") 'tab-bar-select-tab 1)
+(evil-define-key nil  global-map (kbd "M-3") 'tab-bar-select-tab 2)

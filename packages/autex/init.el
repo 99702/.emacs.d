@@ -6,9 +6,7 @@
 			      TeX-view-program-selection))))
 (add-hook 'doc-view-mode-hook 'auto-revert-mode)
 
-(defun run-save-latex-to-pdf ()
-  "Run save-latex-to-pdf macro when saving a LaTeX file."
-  (when (eq major-mode 'latex-mode)
-    (save-latex-to-pdf)))
-
-(add-hook 'after-save-hook #'run-save-latex-to-pdf)
+(add-hook 'TeX-mode-hook (lambda ()
+                           (add-hook 'after-save-hook (lambda ()
+                                                       (TeX-command-run-all nil))
+                                     nil t)))
