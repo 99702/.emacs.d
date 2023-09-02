@@ -176,9 +176,9 @@
 (setq lsp-headerline-breadcrumb-enable nil)
 
 ;; optionally
-(use-package lsp-ui 
-  :straight t
-  :commands lsp-ui-mode)
+;; (use-package lsp-ui 
+;;   :straight t
+;;   :commands lsp-ui-mode)
 ;; if you are ivy user
 (use-package lsp-ivy 
   :straight t
@@ -218,16 +218,16 @@
 
 
 
-;; tide configuration
-(use-package tide :straight t)
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (company-mode +1))
-(setq company-tooltip-align-annotations t)
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
-(add-hook 'typescript-ts-mode-hook #'setup-tide-mode)
+;; ;; tide configuration
+;; (use-package tide :straight t)
+;; (defun setup-tide-mode ()
+;;   (interactive)
+;;   (tide-setup)
+;;   (flycheck-mode +1)
+;;   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+;;   (eldoc-mode +1)
+;;   (tide-hl-identifier-mode +1)
+;;   (company-mode +1))
+;; (setq company-tooltip-align-annotations t)
+;; (add-hook 'typescript-mode-hook #'setup-tide-mode)
+;; (add-hook 'typescript-ts-mode-hook #'setup-tide-mode)

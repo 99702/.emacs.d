@@ -83,3 +83,12 @@
 ;; (type-break-keystroke-threshold '(nil . 2625))
 ;; (type-break-demo-boring-stats t)
 ;; (type-break-demo-functions '(type-break-demo-boring))
+
+(defun open-in-terminal ()
+  (interactive)
+  (let ((file (buffer-file-name)))
+    (if file
+        (if (file-directory-p file)
+            (setq file (concat file "/")))
+      (setq file default-directory))
+    (start-process "gnome-terminal" nil "gnome-terminal" file)))

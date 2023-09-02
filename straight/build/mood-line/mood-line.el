@@ -1,0 +1,1 @@
+/home/kali/.emacs.d/straight/repos/mood-line/mood-line.el

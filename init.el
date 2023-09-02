@@ -23,7 +23,7 @@
 
 ;; (load "~/.emacs.d/packages/treemacs/init.el")
 ;; (load "~/.emacs.d/packages/doom-modeline/init.el")
-(load "~/.emacs.d/packages/powerline/init.el")
+(load "~/.emacs.d/packages/mood-line/init.el")
 ;; (load "~/.emacs.d/packages/sidebar.el/init.el")
 
 
