@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/nyan-mode/nyan-mode.el

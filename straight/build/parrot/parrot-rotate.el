@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/parrot/parrot-rotate.el

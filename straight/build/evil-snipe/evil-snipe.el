@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/evil-snipe/evil-snipe.el

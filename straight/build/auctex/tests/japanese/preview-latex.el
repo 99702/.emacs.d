@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/auctex/tests/japanese/preview-latex.el

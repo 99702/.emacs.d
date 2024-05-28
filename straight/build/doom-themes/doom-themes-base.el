@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/themes/doom-themes-base.el

@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/prettier-emacs/prettier-js.el

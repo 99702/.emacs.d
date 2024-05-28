@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/mood-line/mood-line-segment-indentation.el

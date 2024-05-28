@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/projectile/projectile.el

@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/auctex/aclocal.m4

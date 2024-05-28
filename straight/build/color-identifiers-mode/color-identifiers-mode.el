@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/color-identifiers-mode/color-identifiers-mode.el

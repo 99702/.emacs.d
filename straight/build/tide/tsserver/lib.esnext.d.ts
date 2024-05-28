@@ -1,1 +1,0 @@
-/home/kali/.emacs.d/straight/repos/tide/tsserver/lib.esnext.d.ts
