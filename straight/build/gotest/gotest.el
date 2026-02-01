@@ -1,0 +1,1 @@
+/home/rajan/.emacs.d/straight/repos/gotest.el/gotest.el

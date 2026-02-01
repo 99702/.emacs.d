@@ -1,0 +1,1 @@
+/home/rajan/.emacs.d/straight/repos/map/.github/PULL_REQUEST_TEMPLATE.md

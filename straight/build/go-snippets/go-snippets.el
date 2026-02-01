@@ -1,0 +1,1 @@
+/home/rajan/.emacs.d/straight/repos/go-snippets/go-snippets.el

@@ -1,0 +1,1 @@
+/home/rajan/.emacs.d/straight/repos/standard-themes/.github/PULL_REQUEST_TEMPLATE.md

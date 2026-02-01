@@ -21,16 +21,9 @@
                          ("elpa" . "https://elpa.gnu.org/packages/")))
 
 ;; Initialize packages
-(straight-use-package 'use-package)
 (setq use-package-always-ensure t)
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-;; Example usage of `use-package'
-(use-package straight
-  :straight t
-  :config
-  (setq straight-use-package-by-default t))
-
-
+;; TypeScript mode association
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))

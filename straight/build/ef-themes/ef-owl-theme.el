@@ -1,0 +1,1 @@
+/home/rajan/.emacs.d/straight/repos/ef-themes/ef-owl-theme.el

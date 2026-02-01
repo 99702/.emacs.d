@@ -1,0 +1,1 @@
+/home/rajan/.emacs.d/straight/repos/spacemacs-theme/spacemacs-dark-theme.el

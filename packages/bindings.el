@@ -1,7 +1,16 @@
+;;; bindings.el --- Keybindings and Evil Configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; Evil mode configuration and custom keybindings
+
+;;; Code:
+
+;; Evil mode packages
 (use-package evil
   :straight t
   :init
   (setq evil-want-keybinding nil))
+
 
 (use-package evil-collection
   :straight t
@@ -98,33 +107,16 @@
 (define-key evil-normal-state-map (kbd "<leader>ee") 'cider-eval-last-sexp)
 (define-key evil-normal-state-map (kbd "<leader>n") 'evil-jump-item)
 
-
-
-;; Evil snipe start 
-;; (use-package evil-snipe
-;;   :straight t
-;;   )
-;; (evil-snipe-override-mode 1)
-;; Evil snipe end
-
-
-;; Evil mc start 
-;; (use-package evil-mc
-;;   :straight t
-;;   )
-;; (global-evil-mc-mode  1) ;; enable
-;; (evil-define-key 'visual evil-mc-key-map
-;;   "A" #'evil-mc-make-cursor-in-visual-selection-end
-;;   "I" #'evil-mc-make-cursor-in-visual-selection-beg)
-;; Evil mc end
-
+;; Tab bar selection keybindings
 
 (evil-define-key nil  global-map (kbd "M-1") 'tab-bar-select-tab 0)
 (evil-define-key nil  global-map (kbd "M-2") 'tab-bar-select-tab 1)
 (evil-define-key nil  global-map (kbd "M-3") 'tab-bar-select-tab 2)
 
-
-;;;;;; lsp-mode macros setup 
+;; LSP mode keybindings
 (evil-global-set-key 'normal "gr" 'lsp-find-references)
 (evil-global-set-key 'normal "gd" 'lsp-find-definition)
 (evil-global-set-key 'normal "gi" 'lsp-goto-implementation)
+
+(provide 'bindings)
+;;; bindings.el ends here
