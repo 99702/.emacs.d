@@ -1,1 +1,0 @@
-/home/rajan/.emacs.d/straight/repos/ef-themes/ef-melissa-light-theme.el

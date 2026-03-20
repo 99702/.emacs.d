@@ -1,1 +1,0 @@
-/home/rajan/.emacs.d/straight/repos/fontaine/.github/PULL_REQUEST_TEMPLATE.md

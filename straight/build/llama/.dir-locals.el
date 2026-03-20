@@ -1,1 +1,0 @@
-/home/rajan/.emacs.d/straight/repos/llama/.dir-locals.el

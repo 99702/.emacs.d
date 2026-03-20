@@ -1,1 +1,0 @@
-/home/rajan/.emacs.d/straight/repos/slime/swank/abcl.lisp

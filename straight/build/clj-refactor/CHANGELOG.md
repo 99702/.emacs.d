@@ -1,1 +1,0 @@
-/home/rajan/.emacs.d/straight/repos/clj-refactor.el/CHANGELOG.md

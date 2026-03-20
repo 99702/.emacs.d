@@ -1,1 +1,0 @@
-["^ ","~$greet",["^ ","~:row",4,"~:col",1,"~:fixed-arities",["~#set",[1]],"~:name","^0","~:ns","~$hello.core","~:top-ns","^7","~:arities",["^ ","~i1",["^ ","~:ret","~:string","~:arglist-str","[name]"]],"~:type","~:fn"],"~:filename","/tmp/test-clojure.clj"]

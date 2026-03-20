@@ -1,1 +1,0 @@
-/home/rajan/.emacs.d/straight/repos/ripgrep.el/ripgrep.el
